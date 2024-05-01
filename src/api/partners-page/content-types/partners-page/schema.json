@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "partners_pages",
+  "info": {
+    "singularName": "partners-page",
+    "pluralName": "partners-pages",
+    "displayName": "partners-page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "partnersSections": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.parterns-section"
+      ]
+    }
+  }
+}
