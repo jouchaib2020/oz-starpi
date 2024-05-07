@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_seo_seos",
+  "info": {
+    "displayName": "seo",
+    "icon": "filter"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "string"
+    },
+    "sharedImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

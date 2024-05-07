@@ -15,11 +15,10 @@
     "title": {
       "type": "string"
     },
-    "partnersSections": {
-      "type": "dynamiczone",
-      "components": [
-        "blocks.parterns-section"
-      ]
+    "section": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.parterns-section"
     }
   }
 }

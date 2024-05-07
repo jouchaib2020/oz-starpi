@@ -50,7 +50,7 @@ export interface MicrosImage extends Schema.Component {
   };
   attributes: {
     name: Attribute.String;
-    Image: Attribute.Media;
+    image: Attribute.Media;
     url: Attribute.Text;
   };
 }
@@ -96,6 +96,61 @@ export interface NumberCardNumberCard extends Schema.Component {
   };
 }
 
+export interface SharedSeoSeo extends Schema.Component {
+  collectionName: 'components_shared_seo_seos';
+  info: {
+    displayName: 'seo';
+    icon: 'filter';
+  };
+  attributes: {
+    metaTitle: Attribute.String;
+    metaDescription: Attribute.String;
+    sharedImage: Attribute.Media;
+  };
+}
+
+export interface SharedMedia extends Schema.Component {
+  collectionName: 'components_shared_media';
+  info: {
+    displayName: 'media';
+  };
+  attributes: {
+    file: Attribute.Media;
+  };
+}
+
+export interface SharedQuote extends Schema.Component {
+  collectionName: 'components_shared_quotes';
+  info: {
+    displayName: 'Quote';
+  };
+  attributes: {
+    title: Attribute.String;
+    body: Attribute.String;
+    author: Attribute.String;
+  };
+}
+
+export interface SharedRichText extends Schema.Component {
+  collectionName: 'components_shared_rich_texts';
+  info: {
+    displayName: 'Rich text';
+  };
+  attributes: {
+    body: Attribute.RichText;
+  };
+}
+
+export interface SharedVideoEmbed extends Schema.Component {
+  collectionName: 'components_shared_video_embeds';
+  info: {
+    displayName: 'Video Embed';
+  };
+  attributes: {
+    url: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -106,6 +161,11 @@ declare module '@strapi/types' {
       'number-card.blog-card': NumberCardBlogCard;
       'number-card.how-itworks-cards': NumberCardHowItworksCards;
       'number-card.number-card': NumberCardNumberCard;
+      'shared-seo.seo': SharedSeoSeo;
+      'shared.media': SharedMedia;
+      'shared.quote': SharedQuote;
+      'shared.rich-text': SharedRichText;
+      'shared.video-embed': SharedVideoEmbed;
     }
   }
 }
